@@ -1,46 +1,198 @@
-.App {
-  min-height: 100vh;
-  text-align: center;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+}
+
+#root {
+  max-width: 1280px;
+  width: 100%;
+  margin: 1em auto;
+  background-color: #fff;
+}
+
+.container {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.character {
+  border: 1px solid #db7093;
+  border-radius: 1em 0 1em 0;
+  padding: .5rem;
+  margin: .5rem 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.col {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  width: 100%;
 }
 
-.App-section {
-  flex: 1 1 0;
-  background-color: hsl(220deg 13% 13%);
-  color: white;
+.row {
+  display: flex;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.container form {
+  display: flex;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container button {
+  cursor: pointer;
+}
+
+.matched {
+  color: #db7093;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.h-margin {
+  margin: 0 .25em 0 0;
+}
+
+.v-margin {
+  margin: 0.1em 0;
 }
