@@ -1,24 +1,18 @@
 import { useState } from 'react';
 import './App.css';
-import { ATTRIBUTE_LIST, CLASS_LIST, SKILL_LIST } from './consts.js';
+
+import CharacterStoreContext from './contexts/character-store';
+import useStoreDefaults from './hooks/use-store-defaults';
+import CharacterView from './components/views/character-view';
 
 
 function App() {
-  const [num, setNum] = useState<number>(0);
+  const storeDefaults = useStoreDefaults();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>React Coding Exercise</h1>
-      </header>
-      <section className="App-section">
-        <div>
-          Value:
-          {num}
-          <button>+</button>
-          <button>-</button>
-        </div>
-      </section>
-    </div>
+    <CharacterStoreContext.Provider value={storeDefaults}>
+      <CharacterView />
+    </CharacterStoreContext.Provider>
   );
 }
 
